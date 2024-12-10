@@ -5,13 +5,10 @@ import 'package:get/get.dart';
 import 'package:libco_exchange/src/global/controllers/app.dart';
 import 'package:libco_exchange/src/global/utils/colors.dart';
 import 'package:libco_exchange/src/global/widgets/user_header.dart';
-import 'package:libco_exchange/src/modules/companies/companies_screen.dart';
 import 'package:libco_exchange/src/modules/profile/profile_screen.dart';
 import 'package:libco_exchange/src/modules/settings/settings_screen.dart';
 
-import '../exchange/recive_money.dart';
 import '../exchange_prices/exchange_prices.dart';
-import '../my_transfers/my_transactions.dart';
 
 // class HomeScreen extends StatelessWidget {
 //   const HomeScreen({super.key});
@@ -40,10 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
   List<Widget> pages = [
     HomePage(),
-    MyTransactionsScreen(),
     ProfileScreen(),
     SettingScreen()
   ];
+    // MyTransactionsScreen(),
+            // BottomNavigationBarItem(
+            //     icon: Icon(Icons.wallet), label: "my transfers".tr),
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,8 +57,6 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "home".tr),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.wallet), label: "my transfers".tr),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), label: "profile".tr),
             BottomNavigationBarItem(
@@ -90,73 +87,73 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Get.to(CompaniesScreen(
-                      type: 0,
-                    ));
-                  },
-                  child: ClayContainer(
-                    height: 100,
-                    width: 350,
-                    surfaceColor: AppColors.primary,
-                    borderRadius: 15,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                              flex: 3,
-                              child: Text(
-                                "Send Money".tr,
-                                style: Get.theme.textTheme.headlineSmall!
-                                    .copyWith(color: Colors.white),
-                              )),
-                          CircleAvatar(
-                              backgroundColor: AppColors.primary,
-                              radius: 40,
-                              child: SvgPicture.asset(
-                                  "assets/icons/send_mony.svg"))
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Get.to(const ReciveMoneyScreen());
-                  },
-                  child: ClayContainer(
-                    height: 100,
-                    width: 350,
-                    surfaceColor: AppColors.primary,
-                    borderRadius: 15,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                              flex: 3,
-                              child: Text(
-                                "Recive Money".tr,
-                                style: Get.theme.textTheme.headlineSmall!
-                                    .copyWith(color: Colors.white),
-                              )),
-                          CircleAvatar(
-                              backgroundColor: AppColors.primary,
-                              radius: 40,
-                              child: SvgPicture.asset(
-                                  "assets/icons/recive_mony.svg"))
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                // GestureDetector(
+                //   onTap: () {
+                //     Get.to(CompaniesScreen(
+                //       type: 0,
+                //     ));
+                //   },
+                //   child: ClayContainer(
+                //     height: 100,
+                //     width: 350,
+                //     surfaceColor: AppColors.primary,
+                //     borderRadius: 15,
+                //     child: Padding(
+                //       padding: const EdgeInsets.all(8.0),
+                //       child: Row(
+                //         crossAxisAlignment: CrossAxisAlignment.center,
+                //         children: [
+                //           Expanded(
+                //               flex: 3,
+                //               child: Text(
+                //                 "Send Money".tr,
+                //                 style: Get.theme.textTheme.headlineSmall!
+                //                     .copyWith(color: Colors.white),
+                //               )),
+                //           CircleAvatar(
+                //               backgroundColor: AppColors.primary,
+                //               radius: 40,
+                //               child: SvgPicture.asset(
+                //                   "assets/icons/send_mony.svg"))
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                // GestureDetector(
+                //   onTap: () {
+                //     Get.to(const ReciveMoneyScreen());
+                //   },
+                //   child: ClayContainer(
+                //     height: 100,
+                //     width: 350,
+                //     surfaceColor: AppColors.primary,
+                //     borderRadius: 15,
+                //     child: Padding(
+                //       padding: const EdgeInsets.all(8.0),
+                //       child: Row(
+                //         crossAxisAlignment: CrossAxisAlignment.center,
+                //         children: [
+                //           Expanded(
+                //               flex: 3,
+                //               child: Text(
+                //                 "Recive Money".tr,
+                //                 style: Get.theme.textTheme.headlineSmall!
+                //                     .copyWith(color: Colors.white),
+                //               )),
+                //           CircleAvatar(
+                //               backgroundColor: AppColors.primary,
+                //               radius: 40,
+                //               child: SvgPicture.asset(
+                //                   "assets/icons/recive_mony.svg"))
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Row(

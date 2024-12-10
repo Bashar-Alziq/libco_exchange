@@ -37,7 +37,7 @@ class StartScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 24),
                 ),
                 const Text(
-                  "LYBIANO EXCHANGE",
+                  "LYBIANO EXCHANGE PRICES",
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(

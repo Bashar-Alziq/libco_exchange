@@ -1,16 +1,11 @@
 // Dart imports:
 // ignore_for_file: library_private_types_in_public_api
 
-import 'dart:async';
-
 // Flutter imports:
 import 'package:flutter/material.dart';
-
 // Package imports:
 
 import 'package:get/get.dart';
-import 'package:libco_exchange/src/global/utils/colors.dart';
-import 'package:libco_exchange/src/modules/start/start_screen.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../global/controllers/auth.dart';
@@ -47,7 +42,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  "Lybiano exchange",
+                  "Lybiano exchange prices",
                   style: Get.textTheme.headlineLarge,
                 ),
                 LottieBuilder.asset("assets/icons/loading.json")

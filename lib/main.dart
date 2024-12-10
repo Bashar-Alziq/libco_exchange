@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       translations: Languages(),
       locale: const Locale('en'),
       fallbackLocale: const Locale('en', ''),
-      title: 'Lybiano Exchange',
+      title: 'Lybiano Exchange Prices',
       theme: appTheme(),
       debugShowCheckedModeBanner: false,
       home: const Splash(),
